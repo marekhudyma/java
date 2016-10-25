@@ -1,15 +1,15 @@
-package mh.java8.simple;
+package mh.java8.patterns;
 
-import mh.java8.simple.core.Apple;
-import mh.java8.simple.core.AppleGreenColorPredicate;
-import mh.java8.simple.core.AppleHeavyWeightPredicate;
-import mh.java8.simple.core.ApplePredicate;
+import mh.java8.patterns.core.Apple;
+import mh.java8.patterns.core.AppleGreenColorPredicate;
+import mh.java8.patterns.core.AppleHeavyWeightPredicate;
+import mh.java8.patterns.core.ApplePredicate;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class MainBefore {
+public class LambdaBefore {
 
     public static void main(String...args) {
         List<Apple> inventory = Arrays.asList(new Apple(80, "green"),

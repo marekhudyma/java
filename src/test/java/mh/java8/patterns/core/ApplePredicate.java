@@ -1,4 +1,4 @@
-package mh.java8.simple.core;
+package mh.java8.patterns.core;
 
 public interface ApplePredicate {
 

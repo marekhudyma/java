@@ -1,0 +1,13 @@
+Valid lambdas
+(parameters) -> expression
+(paramerers) -> {statements;}
+
+
+() -> {}                               =valid
+() -> "Marek"                          =valid
+() -> {return "Marek";}                =valid
+(Integer i) -> return "Marek" + i;     =invalid, return in a constrol flow statement
+(Integer i) -> { return "Marek" + i; } =valid
+(String s) -> {"Marek";}               =invalid, "Marek" is expression, not statement
+(String s) -> {return "Marek";}        =valid
+
