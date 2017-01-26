@@ -84,8 +84,7 @@ public class CollectorsTest {
                                if (dish.getCalories() <= 400) {
                                    return CaloricLevel.DIET;
                                } else if (dish.getCalories() <= 700) {
-                                   return
-                                           CaloricLevel.NORMAL;
+                                   return CaloricLevel.NORMAL;
                                } else {
                                    return CaloricLevel.FAT;
                                }

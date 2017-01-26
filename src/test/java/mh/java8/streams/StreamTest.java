@@ -69,17 +69,18 @@ public class StreamTest {
 
     @Test
     public void testStreamSystemOutPrintln() throws Exception {
-        List<String> threeHighCaloricDishName = DishFactory.create().stream()
-                                                           .filter(dish -> {
-                                                               System.out.println("filtering " + dish.getName());
-                                                               return dish.getCalories() > 300;
-                                                           })
-                                                           .map(dish -> {
-                                                               System.out.println("mapping " + dish.getName());
-                                                               return dish.getName();
-                                                           })
-                                                           .limit(3)
-                                                           .collect(toList());
+        List<String> threeHighCaloricDishName =
+                DishFactory.create().stream()
+                           .filter(dish -> {
+                               System.out.println("filtering " + dish.getName());
+                               return dish.getCalories() > 300;
+                           })
+                           .map(dish -> {
+                               System.out.println("mapping " + dish.getName());
+                               return dish.getName();
+                           })
+                           .limit(3)
+                           .collect(toList());
         System.out.println(threeHighCaloricDishName);
     }
 
@@ -124,7 +125,7 @@ public class StreamTest {
     }
 
     @Test
-    public void testStremFlatMap() throws Exception {
+    public void testStreamFlatMap() throws Exception {
         String[] words = {"Goodbye", "World"};
 
         Arrays.stream(words)
@@ -132,13 +133,11 @@ public class StreamTest {
               .flatMap(Arrays::stream)
               .distinct()
               .forEach(System.out::println);
-
-
         //Stream<String> streamOfwords = Arrays.stream(words);
     }
 
     @Test
-    public void testStremMatching() throws Exception {
+    public void testStreamMatching() throws Exception {
         if (DishFactory.create().stream().anyMatch(Dish::isVegetarian)) {
             System.out.println("There is a vegetarian food");
         }
